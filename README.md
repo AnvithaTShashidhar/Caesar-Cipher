@@ -1,14 +1,14 @@
 # 🔐 Caesar Cipher
 
-> A terminal-based cryptography tool built in Python by **Anvitha T Shashidhar**
+> A terminal-based cryptography tool built in Python by **Anvitha T S**
 
 ---
 
 ## 📖 About
 
-The Caesar Cipher is one of the oldest and simplest encryption techniques in history. Used by Julius Caesar over 2000 years ago to protect military communications, it works by shifting every letter in a message by a fixed number.
+Caesar Cipher is one of the oldest encryption techniques in history — used by Julius Caesar over 2000 years ago to protect military communications. Every letter in a message is shifted by a fixed number, making it unreadable to anyone who doesn't know the shift.
 
-This project implements the Caesar Cipher from scratch — including the ability to crack it without knowing the shift using brute force, demonstrating why simple substitution ciphers are considered weak by modern cryptographic standards.
+This project goes beyond just encrypting and decrypting. It also implements brute force — cracking any Caesar Cipher without knowing the shift — which reveals why simple substitution ciphers are considered weak by modern cryptographic standards.
 
 ---
 
@@ -16,9 +16,11 @@ This project implements the Caesar Cipher from scratch — including the ability
 
 **Skills & Concepts Used:**
 
-`Python` | `Cryptography` | `Brute Force` | `ASCII` | `Modulo Arithmetic`
+`Python` | `Cryptography` | `Brute Force` | `ASCII` | `Modulo Arithmetic` | `Input Validation`
 
-The core logic converts each letter to its ASCII value, applies a shift within the 26-letter alphabet using modulo arithmetic, and converts it back to a character. The brute force feature systematically tries all 25 possible shifts to crack any Caesar Cipher instantly.
+Before writing any code, I made sure I understood every concept involved. The key insight was using modulo arithmetic to wrap the shift within the 26-letter alphabet — ensuring Z shifted by 3 becomes C, not a random symbol.
+
+The brute force feature came from one question: *"If someone intercepts this message, how easily can they crack it?"*
 
 ---
 
@@ -66,9 +68,16 @@ Message: Khoor Zruog
 
 ## 📊 Results
 
-The brute force feature successfully cracks any Caesar Cipher in at most 25 attempts — exposing the fundamental weakness of single-key substitution ciphers.
+Caesar Cipher can be cracked in at most **25 attempts** — making brute force trivially easy. This contrasts sharply with modern encryption like **AES**, where the number of possible keys makes brute force computationally impossible.
 
-This highlights why modern encryption standards like **AES** use keys with billions of possibilities, making brute force attacks computationally impossible.
+Building this made that difference real and tangible.
+
+---
+
+## 🔮 What's Next
+
+- **Frequency Analysis** — automatically detect the shift by finding the most frequent letter and mapping it to 'E', the most common letter in English
+- Connecting cryptography concepts to **Data Science and pattern recognition**
 
 ---
 
